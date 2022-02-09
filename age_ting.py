@@ -18,13 +18,15 @@ def teh_age_thing():
     elif age < 13:
         print("You are a child.")
     elif age < 20:
-        print("You are a toddler.")
-    elif age < 50:
+        print("You are a teenager.")
+    elif age < 51:
         print("You are an Adult.")
-    elif age < 80:
+    elif age < 81:
         print("You are a big Adult.")
-    elif age < 100:
+    elif age < 101:
         print("You are a very big Adult.")
+    elif age < 121:
+        print("You are the biggest Adult of them all.")
 
 
 def main():
