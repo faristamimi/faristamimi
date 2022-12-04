@@ -1,57 +1,78 @@
-def create_dictionary():
-    # empty dictioynary
-    dict1 = {}
-    dict2 = dict()
-    studentDict = {"studentID": 10008, "name": "Faris", "age": 17, "GPA": 1.5}
-    return dict1, dict2, studentDict
+# Faris AlTamimi, Saif Faidallah, Sameer Dawood, Samuel Oladiran
+
+import pizza_main as tp
 
 
-def print_dictionary(dict):
-    print("length of dictionary:", len(dict))
-    for key in dict:
-        print(key,":", dict[key], end=" ")
+class main:
+    __slots__ = ["_pizza1toppings", "_pizza2toppings", "_pizza2price", "_pizza2price"]
 
-    print() # prints a new line
+    def __init__(self):
+        """a constructor to init the variables"""
+        self._pizza1toppings = []
+        self._pizza2toppings = []
+        self._pizza2price = 5
+        self._pizza2price = 5
 
-    # prints value only
-    print(dict.values())
+    def getpizza1order(self):
+        """Get toppings for the first pizza"""
+        usertoppings = tp.Toppings()
+        print("Welcome to Pizza Shelter, all orders include two pizzas")
+        print("what do you want for your first pizza?")
+        cheeseType = 'O'
+        while cheeseType in ['O', 'o', '0']:
+            print(usertoppings.get_topping_option_print_line('cheese'))
+            cheeseType = input("Choose one type of cheese (O for options): ")
+            for cheeseoption in cheeseType.split():
+                if cheeseoption not in ['O', 'o', '0']:
+                    name, price = usertoppings.get_cheese_topping_name_price(cheeseoption)
+                    self._pizza1toppings.append([name, price])
 
+        meatType = 'O'
+        while meatType in ['O', 'o', '0']:
+            print(usertoppings.get_topping_option_print_line('cheese'))
+            meatType = input("Choose one type of meat (O for options): ")
+            for meatoption in meatType.split():
+                if meatoption not in ['O', 'o', '0']:
+                    name, price = usertoppings.get_meat_topping_name_price(meatoption)
+                    self._pizza1toppings.append([name, price])
 
-def change_dictionary(dictionary):
-    # changes age
-    dictionary["GPA"] = 2.0
-    print("new gpa:", dictionary["GPA"])
+        vegType = 'O'
+        while vegType in ['O', 'o', '0']:
+            print(usertoppings.get_topping_option_print_line('cheese'))
+            vegType = input("Choose one type of meat (O for options): ")
+            for vegoption in vegType.split():
+                if vegoption not in ['O', 'o', '0']:
+                    name, price = usertoppings.get_veg_topping_name_price(vegoption)
+                    self._pizza1toppings.append([name, price])
 
-    # changes age
-    dictionary["age"] = 18
-    print("new age:", dictionary["age"])
+    def getpizza2order(self):
+        """Get toppings for the first pizza"""
+        usertoppings = tp.Toppings()
+        print("Welcome to Pizza Shelter, all orders include two pizzas")
+        print("what do you want for your first pizza?")
+        cheeseType = 'O'
+        while cheeseType in ['O', 'o', '0']:
+            print(usertoppings.get_topping_option_print_line('cheese'))
+            cheeseType = input("Choose one type of cheese (O for options): ")
+            for cheeseoption in cheeseType.split():
+                if cheeseoption not in ['O', 'o', '0']:
+                    name, price = usertoppings.get_cheese_topping_name_price(cheeseoption)
+                    self._pizza2toppings.append([name, price])
 
-    # adds new value
-    dictionary["credits"] = 21
+        meatType = 'O'
+        while meatType in ['O', 'o', '0']:
+            print(usertoppings.get_topping_option_print_line('cheese'))
+            meatType = input("Choose one type of meat (O for options): ")
+            for meatoption in meatType.split():
+                if meatoption not in ['O', 'o', '0']:
+                    name, price = usertoppings.get_meat_topping_name_price(meatoption)
+                    self._pizza2toppings.append([name, price])
 
-    # removes value from the dictionary
-    popped = dictionary.pop("age")
-    print("The value", popped, "has just been deleted.")
-
-
-def find_unique_words():
-    unique_set = set()
-
-    with open("input.txt.txt") as infile:
-
-        for line in infile:
-            words.split()
-            for word in words:
-                unique_set.add(word)
-        return unique_set
-
-
-def main():
-    d1, d2, student = create_dictionary()
-    print_dictionary(student)  # custom print method
-    # print(student)
-
-    change_dictionary(student)
-    find_unique_words()
-
-main()
+        vegType = 'O'
+        while vegType in ['O', 'o', '0']:
+            print(usertoppings.get_topping_option_print_line('cheese'))
+            vegType = input("Choose one type of meat (O for options): ")
+            for vegoption in vegType.split():
+                if vegoption not in ['O', 'o', '0']:
+                    name, price = usertoppings.get_veg_topping_name_price(vegoption)
+                    self._pizza2toppings.append([name, price])
